@@ -1,0 +1,23 @@
+import { chromium } from '@playwright/test'
+import { mkdir } from 'node:fs/promises'
+
+const browser = await chromium.launch()
+const page = await browser.newPage({ viewport: { width: 1536, height: 1024 }, deviceScaleFactor: 1 })
+await mkdir(new URL('../screenshots/', import.meta.url), { recursive: true })
+await page.goto('http://127.0.0.1:4175/')
+await page.screenshot({ path: new URL('../screenshots/01-dashboard-desktop.png', import.meta.url).pathname.slice(1) })
+await page.getByRole('button', { name: 'Continue application' }).click()
+await page.getByLabel('Income type').selectOption({ label: 'Employment' })
+await page.getByRole('button', { name: /Save and continue/ }).click()
+await page.screenshot({ path: new URL('../screenshots/02-form-error-desktop.png', import.meta.url).pathname.slice(1) })
+await page.getByLabel('Annual household income').fill('28500')
+await page.getByRole('button', { name: /Save and continue/ }).click()
+await page.screenshot({ path: new URL('../screenshots/03-confirmation-desktop.png', import.meta.url).pathname.slice(1) })
+const mobile = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1 })
+await mobile.goto('http://127.0.0.1:4175/')
+await mobile.getByRole('button', { name: 'Continue application' }).click()
+await mobile.getByLabel('Income type').selectOption({ label: 'Employment' })
+await mobile.getByRole('button', { name: /Save and continue/ }).click()
+await mobile.evaluate(() => window.scrollTo(0, 0))
+await mobile.screenshot({ path: new URL('../screenshots/04-form-error-mobile.png', import.meta.url).pathname.slice(1) })
+await browser.close()
