@@ -9,44 +9,44 @@ importers:
   .:
     dependencies:
       '@fontsource/libre-baskerville':
-        specifier: latest
+        specifier: 5.3.0
         version: 5.3.0
       '@fontsource/public-sans':
-        specifier: latest
+        specifier: 5.3.0
         version: 5.3.0
       react:
-        specifier: latest
+        specifier: 19.2.8
         version: 19.2.8
       react-dom:
-        specifier: latest
+        specifier: 19.2.8
         version: 19.2.8(react@19.2.8)
     devDependencies:
       '@axe-core/playwright':
-        specifier: latest
+        specifier: 4.12.1
         version: 4.12.1(playwright-core@1.62.1)
       '@eslint/js':
-        specifier: latest
+        specifier: 10.0.1
         version: 10.0.1(eslint@10.8.1)
       '@playwright/test':
-        specifier: latest
+        specifier: 1.62.1
         version: 1.62.1
       '@types/react':
-        specifier: latest
+        specifier: 19.2.18
         version: 19.2.18
       '@types/react-dom':
-        specifier: latest
+        specifier: 19.2.4
         version: 19.2.4(@types/react@19.2.18)
       '@vitejs/plugin-react':
-        specifier: latest
+        specifier: 6.0.5
         version: 6.0.5(vite@8.2.1)
       eslint:
-        specifier: latest
+        specifier: 10.8.1
         version: 10.8.1
       eslint-plugin-react-hooks:
-        specifier: latest
+        specifier: 7.1.1
         version: 7.1.1(eslint@10.8.1)
       eslint-plugin-react-refresh:
-        specifier: latest
+        specifier: 0.5.3
         version: 0.5.3(eslint@10.8.1)
       globals:
         specifier: 17.3.0

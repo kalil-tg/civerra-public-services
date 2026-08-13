@@ -53,6 +53,7 @@ pnpm test:e2e
 - [Design system](docs/DESIGN_SYSTEM.md)
 - [Fidelity ledger](docs/FIDELITY_LEDGER.md)
 - [Manual QA plan](docs/MANUAL_QA_PLAN.md)
+- [Product Rescue evidence capsule](docs/EVIDENCE_CAPSULE_PRODUCT_RESCUE.md)
 
 ## Portfolio
 
